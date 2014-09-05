@@ -1,7 +1,5 @@
 package com.nicflores.app;
 
-
-import com.nicflores.app.user.User;
 import java.util.List;
 
 /**

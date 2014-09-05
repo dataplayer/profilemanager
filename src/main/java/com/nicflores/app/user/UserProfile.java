@@ -1,16 +1,16 @@
 package com.nicflores.app.user;
 
-import com.nicflores.app.UserMethods;
+import com.nicflores.app.User;
 
 /**
  * Created by nicflores on 9/3/14.
  */
-public class User implements UserMethods {
+public class UserProfile implements User {
 
     private String username;
     private String password;
 
-    public User(String username, String password) {
+    public UserProfile(String username, String password) {
         this.username = username;
         this.password = password;
     }

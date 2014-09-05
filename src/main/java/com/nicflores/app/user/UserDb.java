@@ -1,7 +1,7 @@
 package com.nicflores.app.user;
 
 import com.nicflores.app.UserService;
-
+import com.nicflores.app.User;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -14,12 +14,12 @@ public class UserDb implements UserService {
     HashMap<String,User> userdb;
 
     public UserDb() {
-        userdb = new HashMap<String, User>();
+        userdb = new HashMap<String,User>();
     }
 
     @Override
     public synchronized void createUser(String username, String password) {
-        this.userdb.put(username,new User(username, password));
+        this.userdb.put(username,new UserProfile(username, password));
     }
 
     @Override

@@ -6,6 +6,6 @@
   <display-name>Archetype Created Web Application</display-name>
 
   <listener>
-    <listener-class>com.nicflores.app.users.ApplicationListener</listener-class>
+    <listener-class>com.nicflores.app.user.ApplicationListener</listener-class>
   </listener>
 </web-app>
