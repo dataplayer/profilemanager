@@ -23,12 +23,12 @@ public class UserDb implements UserService {
     }
 
     @Override
-    public User getUserByUserName(String username) {
+    public synchronized User getUserByUserName(String username) {
         return this.userdb.get(username);
     }
 
     @Override
-    public List<User> getAllUsers() {
+    public synchronized List<User> getAllUsers() {
         List<User> userlist = new LinkedList<User>();
         for (User user : userdb.values()) {
             userlist.add(user);
