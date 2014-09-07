@@ -9,10 +9,20 @@
         <servlet-name>registration-servlet</servlet-name>
         <servlet-class>com.nicflores.app.user.RegistrationServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>listusers-servlet</servlet-name>
+        <servlet-class>com.nicflores.app.user.ListUsersServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>registration-servlet</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>listusers-servlet</servlet-name>
+        <url-pattern>/listusers</url-pattern>
+    </servlet-mapping>
+
 
     <listener>
       <listener-class>com.nicflores.app.user.ApplicationListener</listener-class>

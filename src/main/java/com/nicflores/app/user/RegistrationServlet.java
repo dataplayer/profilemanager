@@ -18,11 +18,15 @@ public class RegistrationServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,IOException{
         UserService us = (UserService) this.getServletContext().getAttribute("com.nicflores.app.USER_SERVICE");
 
-        String email = request.getParameter("username");
+        String username = request.getParameter("username");
         String password = request.getParameter("password");
 
+        us.createUser(username,password);
+        System.out.println("new user created!");
+
         String nextpage = "/jsp/registered.jsp";
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextpage);
+        //RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher(nextpage);
+        RequestDispatcher dispatcher = request.getRequestDispatcher(nextpage);
         dispatcher.forward(request,response);
     }
 }
