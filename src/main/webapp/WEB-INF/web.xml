@@ -28,7 +28,7 @@
 
 
     <listener>
-      <listener-class>com.nicflores.app.user.ApplicationListener</listener-class>
+      <listener-class>com.nicflores.app.listeners.ApplicationListener</listener-class>
     </listener>
 
 </web-app>
