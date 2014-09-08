@@ -24,7 +24,8 @@ public class RegistrationServlet extends HttpServlet {
         us.createUser(username,password);
         System.out.println("new user created!");
 
-        String nextpage = "/jsp/registered.jsp";
+        //String nextpage = "/WEB-INF/jsp/registered.jsp";
+        String nextpage = "/index.jsp";
         //RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher(nextpage);
         RequestDispatcher dispatcher = request.getRequestDispatcher(nextpage);
         dispatcher.forward(request,response);

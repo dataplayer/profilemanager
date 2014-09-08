@@ -21,8 +21,7 @@ public class ListUsersServlet extends HttpServlet {
         UserService us = (UserService) this.getServletContext().getAttribute("com.nicflores.app.USER_SERVICE");
 
         request.setAttribute("users",us.getAllUsers());
-
-        String nextpage = "/jsp/listusers.jsp";
+        String nextpage = "/WEB-INF/jsp/listusers.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(nextpage);
         dispatcher.forward(request,response);
 
